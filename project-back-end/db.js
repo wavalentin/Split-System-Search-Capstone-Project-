@@ -1,6 +1,6 @@
 // File to start database
 const { Client } = require('pg')
-const client = new Client({
+const db = new Client({
   user: 'demo',
   host: 'localhost',
   database: 'split_systems_db',
@@ -8,7 +8,11 @@ const client = new Client({
   port: 5432,
 })
 
-client.connect(function(err) {
+db.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 })
+
+
+
+module.exports = db;

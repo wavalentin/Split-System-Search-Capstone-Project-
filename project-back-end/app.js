@@ -14,10 +14,10 @@ app.use(express.json());
 
 app.use("/equipments", equipmentRoutes);
 
-// app.get('/', (req, res)=>{
-//     res.status(200);
-//     res.send("Welcome to root URL of Server");
-// });
+app.get('/', (req, res)=>{
+    res.status(200);
+    res.send("Welcome to Split Systems");
+});
 
 app.listen(PORT, (error) =>{
     if(!error)

@@ -14,8 +14,14 @@ router.get("/", async function (req, res, next) {
     }
   });
   
-
-
+router.get("/search", async function (req, res, next) {
+    try {
+      const equipments = await Equipment.findAllByKeyword(req.query.keyword);
+      return res.json({ equipments });
+    } catch (err) {
+      return next(err);
+    }
+  });
 
 
 module.exports = router;
