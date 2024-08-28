@@ -1,4 +1,4 @@
-\echo 'Delete and recreate splitsystems db?'
+\echo 'Delete and recreate splitsystems_db?'
 \prompt 'Return for yes or control-C to cancel > ' foo
 
 DROP DATABASE splitsystems;

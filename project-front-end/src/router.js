@@ -4,6 +4,7 @@ import * as Views from "./views";
 import DefaultRedirect from "./helpers/defaultRedirect";
 import { NavBar } from "./components";
 import SnackOrBoozeApi from "./helpers/Api";
+import SplitSystemApi from "./helpers/Api";
 
 const Router = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,7 +14,7 @@ const Router = () => {
   useEffect(() => {
     async function fetchData() {
       // Fetch snacks data and update the state
-      const equipmentsData = await SnackOrBoozeApi.getSnacks();
+      const equipmentsData = await SplitSystemApi.getEquipments();
       setEquipments(equipmentsData);
 
       // const drinksData = await SnackOrBoozeApi.getDrinks();
