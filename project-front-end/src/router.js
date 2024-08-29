@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter, Route } from "react-router-dom";
-import * as Views from "./views";
 import DefaultRedirect from "./helpers/defaultRedirect";
-import { NavBar } from "./components";
-import SnackOrBoozeApi from "./helpers/Api";
 import SplitSystemApi from "./helpers/Api";
 
 const Router = () => {
@@ -32,17 +29,14 @@ const Router = () => {
 
   return (
     <BrowserRouter>
-      <NavBar />
       <Route exact path="/">
-        <Views.HomeView />
       </Route>
       <Route exact path="/home">
-        <Views.HomeView />
       </Route>
-      <Route exact path="/equipments">
+      <Route exact path="http://localhost:5000/equipments">
         <Views.ItemListView items={equipments} type="equipments" />
       </Route>
-      <Route exact path="/equipments/search">
+      <Route exact path="http://localhost:5000/equipments/search">
         <Views.ItemListView items={search} type="keyword" />
       </Route>
       <Route exact path="/*">
