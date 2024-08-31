@@ -1,11 +1,4 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import Home from "./components/Home";
-import SplitSystemApi from "./helpers/Api";
-// import NavBar from "./components/NavBar";
-import { Route, Switch } from "react-router-dom";
-// import Menu from "./FoodMenu";
-// import Snack from "./FoodItem";
 import Router from "./router";
 
 function App() {
