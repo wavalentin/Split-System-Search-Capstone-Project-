@@ -1,26 +1,10 @@
-import React from "react";
-import Router from "./router";
+import React from 'react';
+import './App.css';
 
 function App() {
-  // const [isLoading, setIsLoading] = useState(true);
-  // const [snacks, setSnacks] = useState([]);
-
-  // useEffect(() => {
-  //   async function getSnacks() {
-  //     let snacks = await SnackOrBoozeApi.getSnacks();
-  //     setSnacks(snacks);
-  //     setIsLoading(false);
-  //   }
-  //   getSnacks();
-  // }, []);
-
-  // if (isLoading) {
-  //   return <p>Loading &hellip;</p>;
-  // }
-
   return (
     <div className="App">
-      <Router/>
+      <h1>Hello World!</h1>
     </div>
   );
 }
