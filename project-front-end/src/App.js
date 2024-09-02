@@ -1,12 +1,15 @@
 import React from 'react';
-import SearchComponent from './Search';
+import Search from './components/Search';
 import './App.css';
+import Header from '.components/Header';
+import ItemList from './components/ItemList';
 
 function App() {
   return (
     <div className="App">
-      <h1>Search Split Systems</h1>
-      <SearchComponent />
+      <Header title = "Search Split Systems" />
+      <Search />
+      <ItemList />
     </div>
   );
 }

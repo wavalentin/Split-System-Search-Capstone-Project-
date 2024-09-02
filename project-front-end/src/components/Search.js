@@ -1,22 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const SearchComponent = () => {
-  const [query, setQuery] = useState('');
-  const [equipments, setEquipments] = useState([]);
-  const [selectedResult, setSelectedResult] = useState(null);
-
-  const splitSystemSearch = async () => {
-    try {
-      const response = await axios.get(`http://localhost:5000/equipments/search?keyword=${query}`, {
-        params: { q: query },
-      });
-      setEquipments(response.data);
-    } catch (error) {
-      console.error('Error fetching search equipment:', error);
-    }
-  };
-
+const Search = () => {
+  
   return (
     <div>
       <input
@@ -49,4 +35,4 @@ const SearchComponent = () => {
   );
 };
 
-export default SearchComponent;
+export default Search;
