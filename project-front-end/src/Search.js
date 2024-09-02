@@ -25,7 +25,7 @@ const SearchComponent = () => {
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Search descriptions"
       />
-      <button onClick={splitSystemSearch}>Search</button>
+      <button onClick="splitSystemSearch()">Search</button>
       {equipments.length > 0 && (
         <ul>
           {equipments.map((result) => (
